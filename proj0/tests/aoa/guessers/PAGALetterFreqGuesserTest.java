@@ -23,7 +23,7 @@ public class PAGALetterFreqGuesserTest {
         assertThat(guess).isEqualTo('o');
 
         // check that the next guess is c if someone has already guessed e and o.
-        guess = nlfg.getGuess("-oo-", List.of('e', 'o'));
+         guess = nlfg.getGuess("-oo-", List.of('e', 'o'));
         assertThat(guess).isEqualTo('c');
     }
 
@@ -50,11 +50,11 @@ public class PAGALetterFreqGuesserTest {
         assertThat(guess).isEqualTo('a');
 
         // check that the next guess is o if a is not found (since the word must be cool)
-        guess = palfg.getGuess("---l", List.of('l', 'a'));
+         guess = palfg.getGuess("---l", List.of('l', 'a'));
         assertThat(guess).isEqualTo('o');
 
         // check that the next guess is c since two os were found (since the word must be cool)
-        guess = palfg.getGuess("-ool", List.of('l', 'a', 'o'));
+         guess = palfg.getGuess("-ool", List.of('l', 'a', 'o'));
         assertThat(guess).isEqualTo('c');
     }
 
